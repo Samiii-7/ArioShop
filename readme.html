@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Readme</title>
+  <style>
+    body {
+      font-family: Vazir, Tahoma, sans-serif;
+      direction: rtl;
+      background: #023047;
+      color: #F5F5F5;
+      max-width: 1200px;
+      margin: auto;
+      padding: 1.5rem;
+      line-height: 1.8;
+    }
+    header {
+      background: linear-gradient(135deg, #8ECAE6, #219EBC);
+      color: #000;
+      text-align: center;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-bottom: 2rem;
+    }
+    header h1, header h2, header h3 {
+      margin: 0.5rem 0;
+      color: #000;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+    }
+    header h2 {
+      font-size: 1.2rem;
+      font-weight: normal;
+    }
+    header h3 {
+      font-size: 1rem;
+      font-weight: normal;
+    }
+    h2 {
+      color: #FB8500;
+      margin-top: 2rem;
+      font-size: 1.3rem;
+    }
+
+    /* --- گرید باکس‌ها --- */
+    .boxes {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin: 1.5rem 0;
+    }
+    .box {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+    }
+    .box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .box img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+    }
+    .caption {
+      padding: 0.8rem;
+      font-size: 0.9rem;
+      color: #555;
+      background: #ffffff;
+    }
+
+    /* استایل لایت‌باکس */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.9);
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 1rem;
+    }
+    .lightbox img {
+      max-width: 100%;
+      max-height: 80%;
+      border-radius: 8px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+    .lightbox .light-caption {
+      margin-top: 1rem;
+      color: #fff;
+      font-size: 1rem;
+      background: rgba(0,0,0,0.6);
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-align: center;
+    }
+
+    /* --- ریسپانسیو --- */
+    @media (max-width: 992px) {
+      .boxes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media (max-width: 600px) {
+      .boxes {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding: 1.5rem;
+      }
+      header h1 {
+        font-size: 1.4rem;
+      }
+      header h2 {
+        font-size: 1rem;
+      }
+      header h3 {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>شرح پروژه پوشاک آریو</h1>
+    <h2> نام گروه: R2R(آرتور)</h2>
+    <h3>نام اعضا: رضوی و رفیعی‌منش</h3>
+  </header>
+
+  <h2> معرفی پروژه و هدف آن</h2>
+  <p>
+    درود  
+    ما در این پروژه کوشیدیم وب‌سایتی با محوریت فروشگاهی طراحی کنیم. در این ایده از پایه‌ترین ویژگی‌های یک آنلاین شاپ تا ایجاد ارزش‌های منحصر به فرد را در محیط وردپرس در نظر گرفته و تا آخرین مرحله، یعنی پیاده سازی پیش بردیم.   
+    هدف اصلی گروه R2R از اجرای این ایده و پذیرفتن چالش‌های آن که در ادامه به آن اشاره خواهیم کرد، ساخت بستری جامع برای مشتریان با سلیقه متفاوت بوده که آن را در بخش شخصی سازی به خوبی می‌توان مشاهده کرد.
+  </p>
+
+  <h2> کاربرد بخش‌های مختلف پروژه</h2>
+  <p>
+    در ابتدا با ورود به صفحه اصلی فهرستی از محصولات در اختیار کاربر قرار می‌گیرد که با توجه به خواسته خود قادرند سایز و رنگ دلخواهشان را انتخاب کنند. با فشردن دکمه افزودن به سبد خرید کالا به سبد مشتری اضافه می‌شود و در آن‌جا با چند کلیک ساده تعداد کالا قابل افزایش است و در صورت تثبیت خرید با کلیک بر دکمه رفتن به صفحه پرداخت اطلاعات خود را تکمیل کرده و کالای مد نظر را ثبت سفارش می‌کنند؛ اما در ادامه صفحه اصلی با بخش جذاب شخصی سازی رو به رو خواهیم بود که این مورد به صورت مفصل در بخش بعد شرح داده شده!  
+    در صفحه ارتباط با ما کاربر قادر است تا نظر خود را از طریق فرمی که با استفاده از یک پلاگین وردپرس به نام WPform وارد و ثبت نماید.  
+    در صفحه معرفی ما پس گفتن درباره پوشاک آریو از طریق مپ آدرس دقیق فروشگاه قابل مشاهده است و تمام صفحات قابلیت ریسپانسیو دارند.  
+    در نهایت صفحه سوالات متداول به پاسخگویی به دغدغه‌های رایج مشتریان می‌پردازد.
+  </p>
+
+  <h2> شخصی‌سازی چطور کار می‌کند؟</h2>
+  <p>
+    در ادامه صفحه اصلی ما منتظر مشتری‌ها، با سلیقه‌های متفاوت هستیم. در این قسمت با قرار دادن مدل‌های سه بعدی امکان شبیه‌سازی را به خوبی فراهم ساخته‌ایم. کاربر با توجه به گزینه‌هایی که پیش رو دارد مدل، سایز و رنگ موردنظر خود را از بین گزینه‌های پیش‌فرض انتخاب می‌کند.  
+    در ادامه مشتری طرح دلخواه خود را آپلود کرده و می‌تواند اندازه و مکان قرار گیری آن را تعیین کند؛ اما با تمام این‌ها ویژگی دیگری هست که کاربر می‌تواند در باکس مشخصی اطلاعات بیشتری در رابطه با شیوه قرار گیری نقش دلخواهش به پشتیبان ارائه دهد. سپس با در نظر گرفتن تمام این‌ها محصول به سبد خرید مشتری اضافه می‌شود.
+  </p>
+
+  <div class="boxes">
+    <div class="box" onclick="openLightbox('img/touch.png','در این قطعه کد جابه جایی و زوم داخل موبایل به واسطه تاچ نمایش داده شده است.')">
+      <img src="img/touch.png" alt="عکس اول">
+      <div class="caption">در این قطعه کد جابه جایی و زوم داخل موبایل به واسطه تاچ نمایش داده شده است.</div>
+    </div>
+    <div class="box" onclick="openLightbox('img/mouse.png','در این کد جابه جایی و زوم طرح با موس نمایش داده شده است.')">
+      <img src="img/mouse.png" alt="عکس دوم">
+      <div class="caption">در این کد جابه جایی و زوم طرح با موس نمایش داده شده است.</div>
+    </div>
+    <div class="box" onclick="openLightbox('img/upload.png', 'در این قطعه کد، چگونگی آپلود و نمایش طرح کاربر روی محصول به صورت پیش‌فرض در مرکز صفحه نشان داده می‌شود.')">
+      <img src="img/upload.png" alt="عکس سوم">
+      <div class="caption">در این قطعه کد، چگونگی آپلود و نمایش طرح کاربر روی محصول به صورت پیش‌فرض در مرکز صفحه نشان داده می‌شود.</div>
+    </div>
+  </div>
+
+  <h2> چالش‌ها و حل مسئله</h2>
+  <p>
+    در این بخش یکی از اصلی‌ترین چالش‌های طراحی بخش شخصی سازی که با آن مواجه شدیم و چگونگی برطرف کردن آن را برای شما مطرح خواهیم کرد.  
+    1- در ابتدا قرار بود از طریق three.js مدل 3D رو لود کنیم. قابلیت چرخش و زوم را اضافه کنیم که همراه نورپردازی، سایه، رنگ و طرح بوسیله گزینه‌ها و آپلود عکس روی تکسچر مدل اعمال بشود؛ اما از طریق CDN ها نتونستیم three.js را به وردپرس متصل کنیم و مدام با ارور رو به رو می‌شدیم.  
+    به صورت محلی فایل‌های three.module.js / OrbitControls.js / GLTFLoader.js رو داخل فولدر asset قرار دادیم و لینک کردیم؛ اما همچنان متصل نمی‌شدند و ارور می‌دادند.  
+    چندین پلاگین امتحان کردیم و به صورت رایگان فقط به کمک iframe می‌توانستیم مدل را به نمایش بگذاریم؛ اما هیچ‌جوره در تکسچر مدل تغییری ایجاد نمی‌شد.  
+    در نهایت به حالتی که در حال حاضر وجود داره رسیدیم که مدل 3D رو از طریق پلاگین 3D Viewer داخل صفحه نمایش قرار دادیم و از روش overlay استفاده کردیم تا کاربر بتواند روی مدل، طرح مد نظر خود را قرار دهد و جابه‌جا و زوم کند. البته جهت اینکه بهتر متوجه خواسته کاربر شویم یک textbox قرار دادیم تا درباره اندازه و مکان طرح روی لباس بیشتر توضیح دهد.  
+
+    2- در ادامه جهت افزودن کالاها به صفحه سبد خرید با مشکل مواجه شدیم و کالا مستقیما به صفحه single-product می‌رفت به جای سبد خرید، تا این‌که با سرچ‌های متعدد متوجه شدیم جهت عدم بروز این اتفاق بایستی محصول را از حالت متغیر با 25 تنوع به حالت ساده تغییر دهیم.  
+
+    3- چالش دیگری که با آن رو به رو شدیم نمایش نقشه بود. در ابتدا به دنبال API Key بودیم؛ اما در ادامه متوجه شدیم از صفحات گوگل بابت گرفتن این key بلاک بودیم و به ما اجازه ورود به سرورها داده نمی‌شد.  
+    در نهایت متوجه شدیم با استفاده از Leaflet.js که در گذشته هیچ آشنایی با آن نداشتیم، پیاده سازی این ایده امکان پذیر است.  
+
+    4- چالش دیگری که با آن رو به رو شدیم عدم استایل گرفتن صفحه سبد خرید ووکامرس بود. در این چالش تنها مطالبی که اجرا می‌شدند بلوک‌های پیش‌فرض برگه سبد خرید بودند و در صفحه سبد خرید فایل index اجرا می‌شد؛ اما با این وجود نشان می‌داد که به صفحه cart لینک شده است.  
+    این چالش یک روز تمام زمان برد و از هیچ راهی استایل نمی‌گرفت، تا این‌که یک فایل خارج از پوشه ووکامرس به نام cartsample ایجاد کردیم و با تغییر اسلاگ برگه سبد خرید آن‌ها را به یکدیگر متصل کردیم و توانستیم استایل دهی را تکمیل کنیم.
+  </p>
+
+  <h2> جمع‌بندی</h2>
+  <p>
+    در نهایت با وجود تمام چالش‌ها ما توانستیم ایده اصلی را با موفقیت پیاده سازی کنیم و مشابه طرح ذهنی که در ابتدای دوره نقش آن را روی تخته کشیدیم اجرایی سازیم.  
+    با تشکر از توجه شما  
+    گروه R2R(آرتور)
+  </p>
+
+  <!-- لایت‌باکس -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="">
+    <div id="lightbox-caption" class="light-caption"></div>
+  </div>
+
+  <script>
+    function openLightbox(src, caption) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').innerText = caption;
+      document.getElementById('lightbox').style.display = 'flex';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').style.display = 'none';
+    }
+  </script>
+
+</body>
+</html>
